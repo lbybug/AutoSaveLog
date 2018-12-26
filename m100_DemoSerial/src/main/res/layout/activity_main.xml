@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android1:layout_width="match_parent"
+        android1:layout_height="wrap_content" >
+
+        <Button
+            android1:id="@+id/Connect"
+            style="?android:attr/buttonStyleSmall"
+            android1:layout_width="wrap_content"
+            android1:layout_height="40dp"
+            android1:layout_alignParentLeft="true"
+            android1:layout_alignParentTop="true"
+            android1:onClick="OnClickConnect"
+            android1:text="连接" />
+
+        <Button
+            android1:id="@+id/DisConnect"
+            style="?android:attr/buttonStyleSmall"
+            android1:layout_width="wrap_content"
+            android1:layout_height="40dp"
+            android1:layout_alignParentTop="true"
+            android1:layout_toRightOf="@+id/Connect"
+            android1:onClick="OnClickDisConnect"
+            android1:text="断开" />
+
+        <Spinner
+            android1:id="@+id/spinner1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="40dp"
+            android1:layout_alignParentTop="true"
+            android1:layout_toRightOf="@+id/DisConnect" />
+
+        <RadioGroup
+            android1:id="@+id/radioGroup1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="wrap_content"
+            android1:layout_alignParentRight="true"
+            android1:layout_alignParentTop="true" >
+
+            <RadioButton
+                android1:id="@+id/ChineseRadio"
+                android1:layout_width="120dp"
+                android1:layout_height="30dp"
+                android1:checked="true"
+                android1:textSize="10dp"
+                android1:text="中文(Chinese)" />
+
+            <RadioButton
+                android1:id="@+id/EnglishRadio"
+                android1:layout_width="120dp"
+                android1:layout_height="30dp"
+                android1:textSize="10dp"
+                android1:text="English(英文)" />
+        </RadioGroup>
+
+        <AutoCompleteTextView
+            android1:id="@+id/autoCompleteTextView1"
+            android1:layout_width="wrap_content"
+            android1:layout_height="40dp"
+            android1:layout_alignBottom="@+id/DisConnect"
+            android1:layout_toRightOf="@+id/spinner1"
+            android1:ems="10"
+            android:textSize="10dp"
+            android1:hint="若下拉框没有找到串口，请在输入框输入串口名，例如:ttyS0"
+            android1:text="" />
+
+    </RelativeLayout>
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="396dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android1:layout_weight="0.15" >
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <TextView
+        android1:id="@+id/textViewInfo"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:text="命令状态："
+        android1:textSize="12dip"
+        android1:textStyle="bold" />
+
+    <EditText
+        android1:id="@+id/StatesInfo"
+        android1:layout_width="match_parent"
+        android1:layout_height="wrap_content"
+        android1:editable="false"
+        android1:ems="10"
+        android1:inputType="textMultiLine"
+        android1:textColor="#ff8c00"
+        android1:textSize="15dip"
+        android1:textStyle="bold" >
+
+        <requestFocus />
+    </EditText>
+
+</LinearLayout>

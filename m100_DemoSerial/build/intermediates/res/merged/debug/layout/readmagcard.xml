@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ReadMagCardtab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/ReadTrack1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="22dp"
+        android:text="一轨：" />
+
+    <EditText
+        android:id="@+id/ReadTrack1Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ReadTrack1"
+        android:layout_alignBottom="@+id/ReadTrack1"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/ReadTrack1"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/ReadTrack2Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ReadTrack2"
+        android:layout_alignBottom="@+id/ReadTrack2"
+        android:layout_alignLeft="@+id/ReadTrack1Data"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/ReadTrack2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ReadTrack1"
+        android:layout_below="@+id/ReadTrack1Data"
+        android:layout_marginTop="23dp"
+        android:text="二轨：" />
+
+    <TextView
+        android:id="@+id/ReadTrack3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ReadTrack2"
+        android:layout_below="@+id/ReadTrack2Data"
+        android:layout_marginTop="23dp"
+        android:text="三轨：" />
+
+    <EditText
+        android:id="@+id/ReadTrack3Data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ReadTrack3"
+        android:layout_alignBottom="@+id/ReadTrack3"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/ReadTrack3"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/ReadEnterCard"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ReadTrack3Data"
+        android:layout_marginTop="35dp"
+        android:onClick="OnClickReadEnterCard"
+        android:text="进卡" />
+
+    <Button
+        android:id="@+id/ReadEject"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ReadEnterCard"
+        android:layout_alignBottom="@+id/ReadEnterCard"
+        android:layout_alignLeft="@+id/ReadTrack3Data"
+        android:onClick="OnClickReadEject"
+        android:text="弹卡" />
+
+    <Button
+        android:id="@+id/ReadMagcard"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ReadEject"
+        android:layout_alignBottom="@+id/ReadEject"
+        android:layout_toRightOf="@+id/ReadEject"
+        android:onClick="OnClickReadMagcard"
+        android:text="读磁卡" />
+
+    <Button
+        android:id="@+id/ClearMagcardData"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ReadMagcard"
+        android:layout_toRightOf="@+id/ReadMagcard"
+        android:onClick="OnClickClearMagcardData"
+        android:text="清除缓冲区数据" />
+    
+</RelativeLayout>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/S50tab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/S50DetectCard"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="10dip"
+        android:onClick="S50DetectCardOnClick"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="寻卡" />
+
+    <Button
+        android:id="@+id/S50GetCardID"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="10dip"
+        android:onClick="S50GetCardIDOnClick"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/S50DetectCard"
+        android:text="获取序列号" />
+
+    <Button
+        android:id="@+id/S50VerifyPassWord"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="10dip"
+        android:onClick="S50VerifyPassWordOnClick"
+        android:layout_above="@+id/S50CardIDtextView"
+        android:layout_toRightOf="@+id/S50GetCardID"
+        android:text="检验密码" />
+
+    <Button
+        android:id="@+id/S50Halt"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textSize="10dip"
+        android:onClick="S50HaltOnClick"
+        android:layout_above="@+id/S50CardIDtextView"
+        android:layout_toRightOf="@+id/S50VerifyPassWord"
+        android:text="停机" />
+
+    <AutoCompleteTextView
+        android:id="@+id/S50IncreaseDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/S50IncreaseDatatextView"
+        android:layout_alignBottom="@+id/S50IncreaseDatatextView"
+        android:layout_alignLeft="@+id/S50SectorAddrSpinner1"
+        android:ems="10"
+        android:textSize="14dip"
+        android:text="01000000" />
+
+    <TextView
+        android:id="@+id/S50CardIDtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/S50DetectCard"
+        android:text="序列号：" />
+
+    <AutoCompleteTextView
+        android:id="@+id/S50CardIDDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/S50CardIDtextView"
+        android:layout_alignBottom="@+id/S50CardIDtextView"
+        android:layout_toRightOf="@+id/S50CardIDtextView"
+        android:editable="false"
+        android:ems="10"
+        android:textSize="14dip" />
+
+    <Spinner
+        android:id="@+id/S50SectorAddrSpinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/S50SectorAddrtextView"
+        android:layout_toRightOf="@+id/S50SectorAddrtextView" />
+
+    <TextView
+        android:id="@+id/S50PassWordTypeSectortextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/S50PassWordTypeSpinner1"
+        android:layout_alignRight="@+id/S50CardIDDataText"
+        android:text="扇区：" />
+
+    <Spinner
+        android:id="@+id/S50BlockAddrSpinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/S50IncreaseDatatextView"
+        android:layout_toRightOf="@+id/S50BlockAddrtextView" />
+
+    <AutoCompleteTextView
+        android:id="@+id/S50PassWordDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/S50PassWordtextView"
+        android:layout_alignBottom="@+id/S50PassWordtextView"
+        android:layout_alignLeft="@+id/S50PassWordtextView"
+        android:ems="10"
+        android:text="FFFFFFFFFFFF"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/S50BlockAddrtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/S50IncreaseDatatextView"
+        android:layout_alignRight="@+id/S50PassWordTypeSpinner1"
+        android:text="块：" />
+
+    <TextView
+        android:id="@+id/S50PassWordTypetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/S50CardIDDataText"
+        android:layout_toLeftOf="@+id/S50PassWordTypeSpinner1"
+        android:text="密码类型:" />
+
+    <Spinner
+        android:id="@+id/S50PassWordTypeSpinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/S50SectorAddrSpinner1"
+        android:layout_alignTop="@+id/S50CardIDtextView" />
+
+    <Spinner
+        android:id="@+id/S50PassWordSectorSpinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/S50BlockAddrSpinner1"
+        
+        android:layout_toRightOf="@+id/S50CardIDDataText" />
+
+    <TextView
+        android:id="@+id/S50SectorAddrtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/S50PassWordTypetextView"
+        android:layout_marginTop="17dp"
+        android:text="扇区：" />
+
+    <TextView
+        android:id="@+id/S50InitDatatextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/S50DecreaseDataText"
+        android:layout_toLeftOf="@+id/S50WriteBlockData"
+        android:text="初始化值:" />
+
+    <AutoCompleteTextView
+        android:id="@+id/S50InitDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/S50InitDatatextView"
+        android:layout_alignBottom="@+id/S50InitDatatextView"
+        android:layout_alignRight="@+id/S50PassWordTypeSectortextView"
+        android:ems="10"
+        android:text="00000000"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/S50IncreaseDatatextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/S50SectorAddrSpinner1"
+        android:layout_toLeftOf="@+id/S50CardIDDataText"
+        android:text="增值数:" />
+
+    <TextView
+        android:id="@+id/S50DecreaseDatatextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/S50IncreaseDataText"
+        android:layout_alignBottom="@+id/S50IncreaseDataText"
+        android:layout_toRightOf="@+id/S50WriteBlockData"
+        android:text="减值数:" />
+
+    <AutoCompleteTextView
+        android:id="@+id/S50DecreaseDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/S50DecreaseDatatextView"
+        android:layout_alignBottom="@+id/S50DecreaseDatatextView"
+        android:layout_alignLeft="@+id/S50WriteDataText"
+        android:ems="10"
+        android:text="01000000"
+        android:textSize="14dip" />
+
+    <AutoCompleteTextView
+        android:id="@+id/S50WriteDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/S50WriteDatatextView"
+        android:layout_alignBottom="@+id/S50WriteDatatextView"
+        android:layout_alignLeft="@+id/S50PassWordDataText"
+        android:layout_alignRight="@+id/S50Halt"
+        android:ems="10"
+        android:text="112233445566778899AABBCCDDEEFF00"
+        android:textSize="10dip" />
+
+    <TextView
+        android:id="@+id/S50WriteDatatextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/S50InitDataText"
+        android:layout_alignBottom="@+id/S50InitDataText"
+        android:layout_alignLeft="@+id/S50DecreaseDatatextView"
+        android:text="数据：" />
+
+    <TextView
+        android:id="@+id/S50PassWordtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/S50PassWordTypeSectortextView"
+        android:layout_toRightOf="@+id/S50WriteBlockData"
+        android:text="密码：" />
+
+    <Button
+        android:id="@+id/S50Derease"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:onClick="S50DereaseOnClick"
+        android:layout_alignBaseline="@+id/S50InitData"
+        android:layout_alignBottom="@+id/S50InitData"
+        android:layout_toLeftOf="@+id/S50InitData"
+        android:text="减值"
+        android:textSize="10dip" />
+
+    <Button
+        android:id="@+id/S50WriteBlockData"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:onClick="S50WriteBlockDataOnClick"
+        android:layout_alignBaseline="@+id/S50ReadBlockData"
+        android:layout_alignBottom="@+id/S50ReadBlockData"
+        android:layout_alignRight="@+id/S50IncreaseDataText"
+        android:text="写数据"
+        android:textSize="10dip" />
+
+    <Button
+        android:id="@+id/S50ReadBlockData"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:onClick="S50ReadBlockDataOnClick"
+        android:layout_alignRight="@+id/S50IncreaseDatatextView"
+        android:layout_below="@+id/S50WriteDataText"
+        android:text="读数据"
+        android:textSize="10dip" />
+
+    <Button
+        android:id="@+id/S50InitData"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/S50WriteBlockData"
+        android:layout_alignBottom="@+id/S50WriteBlockData"
+        android:layout_alignLeft="@+id/S50WriteDataText"
+        android:onClick="S50InitDataOnClick"
+        android:text="初始化"
+        android:textSize="10dip" />
+
+    <Button
+        android:id="@+id/S50Increase"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/S50ReadBlockData"
+        android:layout_alignBottom="@+id/S50ReadBlockData"
+        android:layout_alignRight="@+id/S50GetCardID"
+        android:onClick="S50IncreaseOnClick"
+        android:text="增值"
+        android:textSize="10dip" />
+
+</RelativeLayout>

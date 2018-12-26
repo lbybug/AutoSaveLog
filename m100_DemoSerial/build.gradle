@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.2"
+    compileOptions.encoding="GBK"
+
+    
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        applicationId "com.example.m100_demoserial"
+        minSdkVersion 8
+        targetSdkVersion 18
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.+'
+    compile files('libs/M100_Serial_Dll.jar')
+}
+
+//指定编译的编码
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

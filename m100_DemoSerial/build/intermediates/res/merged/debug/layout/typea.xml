@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TypeAtab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="59dp"
+        android:text="Send-APDU: " />
+
+    <EditText
+        android:id="@+id/TypeASAPDU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="textMultiLine" 
+        android:textStyle="bold"
+        android:textSize="15dip"
+        android:singleLine="true">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/TypeARAPDU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/TypeASAPDU"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textStyle="bold"
+        android:textSize="15dip" 
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TypeARAPDU"
+        android:layout_alignParentLeft="true"
+        android:text="Recv-APDU: " />
+
+    <Button
+        android:id="@+id/TypeAActive"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="54dp"
+        android:onClick="OnClickTypeAActive"
+        android:text="TypeA卡片激活" />
+
+    <Button
+        android:id="@+id/TypeAAPDU"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TypeAActive"
+        android:layout_alignBottom="@+id/TypeAActive"
+        android:layout_toRightOf="@+id/TypeAActive"
+        android:onClick="OnClickTypeAAPDU"
+        android:text="TypeA APDU命令" />
+
+    <Button
+        android:id="@+id/TypeAICCardNum"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TypeAActive"
+        android:layout_toLeftOf="@+id/TypeAAPDU"
+        android:onClick="OnClickTypeAICCardNum"
+        android:text="获取银行卡号" />
+    
+</RelativeLayout>

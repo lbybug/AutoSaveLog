@@ -54,7 +54,6 @@ public class LogServices extends Service {
                 }
             }
         }.start();
-
         return super.onStartCommand(intent, flags, startId);
     }
 

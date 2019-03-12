@@ -70,13 +70,28 @@ public class LogSaver {
      * @param args 参数
      */
     public static void main(String[] args) {
+        System.out.println("press 'q' to exit.");
+        start();
+        try {
+            while (System.in.read() != 'q') {
+                Thread.sleep(100);
+            }
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @SuppressLint("NewApi")
+    public static void start() {
         try {
             System.out.println("start to save log ..");
             Log.e(TAG, "start to save log ..");
             File extPath = new File("/sdcard/");
-            Log.d(TAG, "external storage path : " + extPath);
+            Log.e(TAG, "external storage path : " + extPath);
             File path = new File(extPath, LOG_FOLDER_NAME);
+
             new Thread(new LogcatSaver(path)).start();
+
         } catch (Exception e) {
             e.printStackTrace();
             new Thread(new LogcatSaver(new File("/mnt/sdcard/"))).start();
@@ -519,6 +534,9 @@ public class LogSaver {
 
         public LogcatSaver(File path) {
             super("logcat", path);
+            Log.e(TAG, "================================");
+            Log.e(TAG, "1111111111111111111111111111");
+            Log.e(TAG, "================================");
         }
 
         private void open() throws IOException {

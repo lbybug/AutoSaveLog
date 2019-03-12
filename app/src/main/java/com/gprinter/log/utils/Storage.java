@@ -60,7 +60,6 @@ public class Storage {
                 getExternalStorageDirectory();
             }
             return true;
-
         } else {
             String state = Environment.getExternalStorageState();
             return Environment.MEDIA_MOUNTED.equals(state);

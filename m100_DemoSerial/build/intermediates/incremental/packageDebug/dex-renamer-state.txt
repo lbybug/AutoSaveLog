@@ -1,4 +1,0 @@
-#Wed Dec 26 16:46:08 CST 2018
-base.0=D\:\\svn\\work\\dev\\AutoSaveLog\\m100_DemoSerial\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=D\:\\svn\\work\\dev\\AutoSaveLog\\m100_DemoSerial\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
